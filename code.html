@@ -3,68 +3,66 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 <title>Observability Academy</title>
 
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&family=Inter&family=Manrope&display=swap" rel="stylesheet"/>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
-<style>
-body { font-family: 'Inter', sans-serif; }
-</style>
 </head>
 
-<body class="bg-[#081425] text-white">
+<body class="bg-[#081425] text-white font-sans">
 
 <!-- NAVBAR -->
-<nav class="flex justify-between items-center p-4 border-b border-gray-700">
-<h1 class="text-xl font-bold text-blue-300">OBSERVABILITY ACADEMY</h1>
+<nav class="fixed top-0 w-full flex justify-between items-center px-8 h-16 bg-[#081425] border-b border-gray-800 z-50">
+<h1 class="text-blue-300 font-bold">OBSERVABILITY ACADEMY</h1>
 
-<div class="flex gap-6">
+<div class="flex gap-6 text-sm">
 <a href="#">Meu Aprendizado</a>
 <a href="#">Laboratórios</a>
 <a href="#">Biblioteca</a>
 </div>
 </nav>
 
-<!-- CONTEÚDO -->
-<div class="p-6">
+<div class="pt-20 p-8">
 
-<h1 class="text-3xl font-bold mb-2">Meu Centro de Aprendizado</h1>
-<p class="mb-6 text-gray-400">
+<!-- HEADER -->
+<h1 class="text-4xl font-bold mb-2">Meu Centro de Aprendizado</h1>
+<p class="text-gray-400 mb-10">
 Bem-vindo de volta. Suas habilidades em monitoramento estão evoluindo.
 </p>
 
 <!-- CARD PRINCIPAL -->
-<div class="bg-gray-800 p-6 rounded-lg mb-6">
+<div class="bg-[#152031] p-6 rounded-xl mb-8">
 <h2 class="text-xl font-bold mb-2">Módulo Atual</h2>
 <p class="mb-4">Linux, Zabbix e Grafana - Domínio Completo</p>
 
-<p>Progresso do Curso: 65%</p>
+<p class="mb-4">Progresso do Curso: 65%</p>
 
-<button class="mt-4 bg-blue-500 px-4 py-2 rounded hover:bg-blue-600">
+<button class="bg-blue-500 px-6 py-2 rounded hover:bg-blue-600">
 Continuar Curso
 </button>
 </div>
 
 <!-- ATIVIDADE -->
-<div class="bg-gray-800 p-6 rounded-lg mb-6">
+<div class="bg-[#152031] p-6 rounded-xl mb-8">
 <h2 class="text-xl font-bold mb-4">Atividade Recente</h2>
 
-<ul class="space-y-2">
-<li>✔ Finalizou: Zabbix Agent 2</li>
-<li>❌ Falhou: Quiz Prometheus</li>
-<li>▶ Iniciou: Grafana Dashboards</li>
+<ul class="space-y-2 text-sm">
+<li>✔ Finalizou "Zabbix Agent 2"</li>
+<li>❌ Falhou no Quiz: Prometheus</li>
+<li>▶ Iniciou "Grafana Dashboards"</li>
 </ul>
 </div>
 
 <!-- RECOMENDAÇÕES -->
-<div class="bg-gray-800 p-6 rounded-lg">
+<div class="bg-[#152031] p-6 rounded-xl">
 <h2 class="text-xl font-bold mb-4">Trilhas Recomendadas</h2>
 
-<ul class="space-y-2">
+<ul class="space-y-2 text-sm">
 <li>📊 Dashboards Avançados</li>
 <li>🧠 Psicologia de Monitoramento</li>
 <li>🖥️ Laboratório Zabbix Avançado</li>
