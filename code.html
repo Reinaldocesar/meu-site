@@ -1,353 +1,77 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en"><head>
+<html class="dark" lang="pt-BR">
+<head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Observability Academy</title>
+
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "on-secondary-container": "#ffddd4",
-              "secondary-fixed": "#ffdbd1",
-              "on-primary-container": "#2d9cf9",
-              "on-primary-fixed-variant": "#00497d",
-              "primary-fixed-dim": "#9ecaff",
-              "primary": "#9ecaff",
-              "surface-dim": "#081425",
-              "secondary-fixed-dim": "#ffb5a0",
-              "tertiary-fixed": "#98f994",
-              "on-primary-fixed": "#001d36",
-              "tertiary-fixed-dim": "#7ddc7a",
-              "on-background": "#d8e3fb",
-              "on-tertiary-container": "#4eab50",
-              "inverse-on-surface": "#263143",
-              "on-secondary-fixed": "#3b0900",
-              "surface-bright": "#2f3a4c",
-              "inverse-primary": "#0061a4",
-              "on-tertiary-fixed-variant": "#005313",
-              "surface-variant": "#2a3548",
-              "on-secondary-fixed-variant": "#872000",
-              "surface": "#081425",
-              "outline": "#908f9d",
-              "surface-container-low": "#111c2d",
-              "on-primary": "#003258",
-              "surface-tint": "#9ecaff",
-              "surface-container-highest": "#2a3548",
-              "on-error": "#690005",
-              "error-container": "#93000a",
-              "background": "#081425",
-              "primary-fixed": "#d1e4ff",
-              "on-tertiary-fixed": "#002204",
-              "primary-container": "#003157",
-              "secondary-container": "#be3100",
-              "on-secondary": "#601400",
-              "secondary": "#ffb5a0",
-              "error": "#ffb4ab",
-              "surface-container": "#152031",
-              "surface-container-high": "#1f2a3c",
-              "outline-variant": "#454652",
-              "on-surface": "#d8e3fb",
-              "tertiary": "#7ddc7a",
-              "inverse-surface": "#d8e3fb",
-              "tertiary-container": "#00390a",
-              "surface-container-lowest": "#040e1f",
-              "on-surface-variant": "#c6c5d4",
-              "on-tertiary": "#00390a",
-              "on-error-container": "#ffdad6"
-            },
-            fontFamily: {
-              "headline": ["Space Grotesk"],
-              "body": ["Inter"],
-              "label": ["Manrope"]
-            },
-            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-          },
-        },
-      }
-    </script>
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            display: inline-block;
-            line-height: 1;
-            text-transform: none;
-            letter-spacing: normal;
-            word-wrap: normal;
-            white-space: nowrap;
-            direction: ltr;
-        }
-        .glass-panel {
-            background: rgba(47, 58, 76, 0.6);
-            backdrop-filter: blur(20px);
-        }
-    </style>
+body { font-family: 'Inter', sans-serif; }
+</style>
 </head>
-<body class="bg-background text-on-surface font-body min-h-screen">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-[#081425]/80 backdrop-blur-xl shadow-[0_0_32px_rgba(216,227,251,0.08)] flex justify-between items-center px-8 h-16 w-full max-w-[1920px] mx-auto font-['Inter'] antialiased">
-<div class="flex items-center gap-8">
-<span class="font-['Space_Grotesk'] text-xl font-bold tracking-tight text-blue-300">OBSERVABILITY_ACADEMY</span>
-<div class="hidden md:flex gap-6">
-<a class="text-blue-300 font-bold border-b-2 border-blue-400 pb-1" href="#">My Learning</a>
-<a class="text-slate-400 hover:text-slate-200 transition-colors" href="#">Labs</a>
-<a class="text-slate-400 hover:text-slate-200 transition-colors" href="#">Library</a>
-</div>
-</div>
-<div class="flex items-center gap-4">
-<button class="p-2 hover:bg-slate-800/50 rounded-lg transition-all active:scale-95">
-<span class="material-symbols-outlined text-on-surface-variant">notifications</span>
-</button>
-<button class="p-2 hover:bg-slate-800/50 rounded-lg transition-all active:scale-95">
-<span class="material-symbols-outlined text-on-surface-variant">terminal</span>
-</button>
-<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant">
-<img alt="Professional profile avatar" data-alt="Close up of a professional male software engineer avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNRt6w2bU2MB2OeY0nB96VlzjZEoZ8LZ2WCNmAdcBGF2gx_G5SRQzCTeTn5jNJlfoXeWS0G244KnZERPzZ4wSSQV5-4l3Qxb_IpEeNea-AKwSC71h5zYva8cUcsSCPy-TI5G3ZEBWCdJrAeF5IgZ1oSLn-zmEUFuppQzPPi8Q4_KqDWZG2jsIsAQmiYpscdsWDWdj1eTUuyVKofzb07KYbyPdYbb84D3S9zUrmUBNRN-4N5TMXgqK3vqRbzUy_tSlu7TYAo4uSbeU"/>
-</div>
+
+<body class="bg-[#081425] text-white">
+
+<!-- NAVBAR -->
+<nav class="flex justify-between items-center p-4 border-b border-gray-700">
+<h1 class="text-xl font-bold text-blue-300">OBSERVABILITY ACADEMY</h1>
+
+<div class="flex gap-6">
+<a href="#">Meu Aprendizado</a>
+<a href="#">Laboratórios</a>
+<a href="#">Biblioteca</a>
 </div>
 </nav>
-<!-- Main Content Wrapper -->
-<div class="pt-16 flex min-h-screen">
-<!-- SideNavBar (Suppressed on Mobile, Visible on Desktop) -->
-<aside class="hidden lg:flex flex-col border-r border-slate-800/50 bg-[#152031] h-[calc(100vh-64px)] w-72 fixed left-0 top-16 font-['Manrope'] tracking-wider uppercase text-[10px]">
-<div class="p-6 border-b border-slate-800/50">
-<div class="flex items-center gap-3 mb-4">
-<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-emerald-400">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">analytics</span>
-</div>
-<div>
-<h4 class="text-[12px] font-bold text-on-surface">Linux &amp; Monitoring</h4>
-<p class="text-emerald-400">65% COMPLETE</p>
-</div>
-</div>
-<button class="w-full py-3 px-4 bg-gradient-to-r from-primary to-on-primary-container rounded-full text-on-primary font-bold text-[11px] tracking-widest active:scale-95 transition-all">
-                    RESUME LAB
-                </button>
-</div>
-<nav class="flex-1 overflow-y-auto py-4">
-<a class="text-slate-400 px-6 py-4 flex items-center gap-3 hover:bg-slate-800/30 hover:text-emerald-300 transition-all" href="#">
-<span class="material-symbols-outlined">menu_book</span>
-<span>Course Overview</span>
-</a>
-<a class="bg-slate-800 text-emerald-400 border-l-4 border-emerald-400 px-6 py-4 flex items-center gap-3" href="#">
-<span class="material-symbols-outlined">settings_input_component</span>
-<span>Zabbix Setup</span>
-</a>
-<a class="text-slate-400 px-6 py-4 flex items-center gap-3 hover:bg-slate-800/30 hover:text-emerald-300 transition-all" href="#">
-<span class="material-symbols-outlined">insights</span>
-<span>Grafana Metrics</span>
-</a>
-<a class="text-slate-400 px-6 py-4 flex items-center gap-3 hover:bg-slate-800/30 hover:text-emerald-300 transition-all" href="#">
-<span class="material-symbols-outlined">terminal</span>
-<span>Linux Internals</span>
-</a>
-<a class="text-slate-400 px-6 py-4 flex items-center gap-3 hover:bg-slate-800/30 hover:text-emerald-300 transition-all" href="#">
-<span class="material-symbols-outlined">verified</span>
-<span>Final Exam</span>
-</a>
-</nav>
-<div class="p-6 border-t border-slate-800/50">
-<a class="text-slate-400 flex items-center gap-3 mb-4 hover:text-emerald-300" href="#">
-<span class="material-symbols-outlined text-sm">help</span>
-<span>Support</span>
-</a>
-<a class="text-slate-400 flex items-center gap-3 hover:text-emerald-300" href="#">
-<span class="material-symbols-outlined text-sm">description</span>
-<span>Documentation</span>
-</a>
-</div>
-</aside>
-<!-- Page Canvas -->
-<main class="flex-1 lg:ml-72 p-8 bg-surface-container-low min-h-screen">
-<header class="mb-12">
-<h1 class="font-headline text-4xl font-bold text-on-surface mb-2 tracking-tight">My Learning Center</h1>
-<p class="text-on-surface-variant font-body">Welcome back. Your infrastructure monitoring skills are growing.</p>
-</header>
-<!-- Bento Grid Layout -->
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-<!-- Hero Course Card -->
-<div class="lg:col-span-8 bg-surface-container rounded-xl overflow-hidden shadow-[0_0_32px_rgba(216,227,251,0.08)]">
-<div class="h-48 bg-gradient-to-br from-primary-container to-surface-container-highest relative flex items-center px-8 overflow-hidden">
-<div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, #9ecaff 1px, transparent 0); background-size: 24px 24px;"></div>
-<div class="relative z-10">
-<span class="font-label text-xs uppercase tracking-widest text-primary mb-2 block">Current Module</span>
-<h2 class="font-headline text-3xl font-bold text-on-surface max-w-md">Linux, Zabbix &amp; Grafana Mastery</h2>
-</div>
-<div class="absolute right-8 top-1/2 -translate-y-1/2 hidden md:block">
-<span class="material-symbols-outlined text-[80px] text-primary/20">query_stats</span>
-</div>
-</div>
-<div class="p-8">
-<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
-<div class="flex-1">
-<div class="flex justify-between items-center mb-2">
-<span class="font-label text-xs font-semibold text-on-surface-variant">COURSE PROGRESS</span>
-<span class="font-label text-xs font-bold text-tertiary">65% COMPLETED</span>
-</div>
-<div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden relative">
-<div class="absolute top-0 left-0 h-full bg-gradient-to-r from-tertiary to-on-tertiary-container transition-all" style="width: 65%;">
-<div class="absolute right-0 top-0 h-full w-4 bg-surface-bright blur-[2px] animate-pulse"></div>
-</div>
-</div>
-</div>
-<button class="bg-gradient-to-br from-primary to-on-primary-container text-on-primary px-8 py-3 rounded-full font-bold font-headline tracking-wide hover:scale-105 transition-transform active:scale-95 shadow-lg shadow-primary/10">
-                                RESUME COURSE
-                            </button>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-<div class="p-4 bg-surface-container-low rounded-lg">
-<div class="flex items-center gap-2 text-tertiary mb-1">
-<span class="material-symbols-outlined text-sm">check_circle</span>
-<span class="font-label text-[10px] uppercase font-bold tracking-wider">Completed</span>
-</div>
-<p class="font-body text-sm font-medium">Lab 04: Kernel Tuning</p>
-</div>
-<div class="p-4 bg-surface-container-high rounded-lg border border-primary/20">
-<div class="flex items-center gap-2 text-primary mb-1">
-<span class="material-symbols-outlined text-sm">play_circle</span>
-<span class="font-label text-[10px] uppercase font-bold tracking-wider">Up Next</span>
-</div>
-<p class="font-body text-sm font-medium">Module 08: SNMP Traps</p>
-</div>
-<div class="p-4 bg-surface-container-low rounded-lg opacity-50">
-<div class="flex items-center gap-2 text-on-surface-variant mb-1">
-<span class="material-symbols-outlined text-sm">lock</span>
-<span class="font-label text-[10px] uppercase font-bold tracking-wider">Locked</span>
-</div>
-<p class="font-body text-sm font-medium">Advanced Visualization</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Recent Activity -->
-<div class="lg:col-span-4 flex flex-col gap-6">
-<div class="bg-surface-container rounded-xl p-6 shadow-sm border border-outline-variant/10 flex-1">
-<div class="flex items-center justify-between mb-6">
-<h3 class="font-headline font-bold text-on-surface">Recent Activity</h3>
-<span class="material-symbols-outlined text-on-surface-variant text-sm">history</span>
-</div>
-<div class="space-y-6">
-<div class="flex gap-4">
-<div class="flex flex-col items-center">
-<div class="w-2 h-2 rounded-full bg-tertiary mt-1.5"></div>
-<div class="w-[1px] h-full bg-outline-variant/30 my-1"></div>
-</div>
-<div>
-<p class="text-xs font-bold font-label text-tertiary mb-1">TODAY, 10:45 AM</p>
-<p class="text-sm font-medium">Finished "Zabbix Agent 2 Implementation"</p>
-<p class="text-xs text-on-surface-variant mt-1">Earned 50 Mastery Points</p>
-</div>
-</div>
-<div class="flex gap-4">
-<div class="flex flex-col items-center">
-<div class="w-2 h-2 rounded-full bg-secondary mt-1.5"></div>
-<div class="w-[1px] h-full bg-outline-variant/30 my-1"></div>
-</div>
-<div>
-<p class="text-xs font-bold font-label text-secondary mb-1">YESTERDAY</p>
-<p class="text-sm font-medium">Failed Quiz: Prometheus Exporters</p>
-<p class="text-xs text-on-surface-variant mt-1">Reviewing docs suggested</p>
-</div>
-</div>
-<div class="flex gap-4">
-<div class="flex flex-col items-center">
-<div class="w-2 h-2 rounded-full bg-primary mt-1.5"></div>
-</div>
-<div>
-<p class="text-xs font-bold font-label text-primary mb-1">2 DAYS AGO</p>
-<p class="text-sm font-medium">Started "Grafana Dashboard Design"</p>
-<p class="text-xs text-on-surface-variant mt-1">Module 07 initiation</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Recommendations / Workshops (Asymmetric Grid) -->
-<div class="lg:col-span-12">
-<h3 class="font-headline text-2xl font-bold mb-6 flex items-center gap-3">
-                        Recommended Paths
-                        <span class="h-px flex-1 bg-outline-variant/20"></span>
-</h3>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<!-- Card 1 -->
-<div class="bg-surface-container rounded-xl overflow-hidden group cursor-pointer hover:bg-surface-container-high transition-all">
-<div class="h-32 bg-slate-800 relative overflow-hidden">
-<img class="w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" data-alt="Close up of computer code on a dark monitor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjPHfDTsF13iZlk7wJoEyLET9ZiSWnm4620glUN35NOSrwT3TSE-rAjnMFhYkgYB-3nZLDikvTut2ql_Q4yAIlZL0Ra2pLZ8z1D5rmWXcsv3yCUm7sAmc2XmLx3UqAs8xnqLK7IT_aOAZ6JKLsjybkptLU0Bi_UQVbe__duDJeImT-EkpcFOi1PhaX3Cc03M0V0cTpQvNuKXcDb3uLMz4HXSJEigXJBILaPhBlTY0gmKAGSDSgaeilterps5K__z7vw6AweI7x1mQ"/>
-<div class="absolute top-3 left-3 px-2 py-1 bg-surface-container-lowest/80 backdrop-blur rounded text-[10px] font-bold text-secondary-fixed">WORKSHOP</div>
-</div>
-<div class="p-4">
-<h4 class="font-headline font-bold text-sm mb-2 group-hover:text-primary transition-colors">Advanced BPF Compiler Collection</h4>
-<div class="flex items-center gap-3 text-xs text-on-surface-variant">
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">timer</span> 2h</span>
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">signal_cellular_alt</span> Advanced</span>
-</div>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="bg-surface-container rounded-xl overflow-hidden group cursor-pointer hover:bg-surface-container-high transition-all">
-<div class="h-32 bg-slate-800 relative overflow-hidden">
-<img class="w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" data-alt="Dynamic bar charts and data visualizations on screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBISlodxjOmmQFN40tnRGGq1JaqfwKUj7UuZnP2xkKbXuQjSPuGpEt6bshn49WeCnuVvVqV5QK4oEv3-nMy_m1JctES6RkGz2YEgqDIAazwhGPaKat4jmmnDgh0r6dNRNfvoImNfMPiQPp4vGvQyxpmmR9KoqUwCfcfTdM8yGJlKEJG-cLYyXs_dgcrqd6tRihZ47XgXClmXzRVVY4L8uKz9is712uF-y6fMsrqUQ4sCI7RDuOo5bp1U3lSn7WF6NFx17WirUijhXI"/>
-<div class="absolute top-3 left-3 px-2 py-1 bg-surface-container-lowest/80 backdrop-blur rounded text-[10px] font-bold text-tertiary">READING</div>
-</div>
-<div class="p-4">
-<h4 class="font-headline font-bold text-sm mb-2 group-hover:text-primary transition-colors">Psychology of Monitoring Dashboards</h4>
-<div class="flex items-center gap-3 text-xs text-on-surface-variant">
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">timer</span> 15m</span>
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">auto_stories</span> Article</span>
-</div>
-</div>
-</div>
-<!-- Card 3 -->
-<div class="bg-surface-container rounded-xl overflow-hidden group cursor-pointer hover:bg-surface-container-high transition-all">
-<div class="h-32 bg-slate-800 relative overflow-hidden">
-<img class="w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" data-alt="High density server rack in data center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXoCiQquaO6UHXEdBR8ttP2TnK1hLYRYjFbao6kzIKUIz5n9taDvXPx-vXrw-ak0nm7HX_Zrn6rVezH62m0qQwK8RDma0kMNlsLOm6bA9-n4gKR4GOG8vnghI08o2J1BeGMgwzXJ0ZlUdEZ9TZi0-mHDfaICQ_StH2VpntH87rXJSFRXs_zYrVagr-V7Afg4Bktjg5FAyhK8ZlQJMVnG-BxZo4QBRL2pqSjQTr-O7Aw4QQFZySpjTLybaR6y8jFAa8dvqTtU_tbjw"/>
-<div class="absolute top-3 left-3 px-2 py-1 bg-surface-container-lowest/80 backdrop-blur rounded text-[10px] font-bold text-primary">LAB</div>
-</div>
-<div class="p-4">
-<h4 class="font-headline font-bold text-sm mb-2 group-hover:text-primary transition-colors">Building Custom Zabbix Loadable Modules</h4>
-<div class="flex items-center gap-3 text-xs text-on-surface-variant">
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">timer</span> 4h</span>
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">terminal</span> Hands-on</span>
-</div>
-</div>
-</div>
-<!-- Card 4 - Call to Action -->
-<div class="bg-gradient-to-br from-surface-container-high to-surface-container rounded-xl border border-dashed border-outline-variant/40 flex flex-col items-center justify-center p-6 text-center group cursor-pointer hover:border-primary/50 transition-all">
-<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-primary">add_task</span>
-</div>
-<h4 class="font-headline font-bold text-sm mb-1">Request Workshop</h4>
-<p class="text-xs text-on-surface-variant">Don't see what you need? Suggest a topic.</p>
-</div>
-</div>
-</div>
-</div>
-</main>
-</div>
-<!-- BottomNavBar (Mobile Only) -->
-<nav class="md:hidden fixed bottom-0 w-full glass-panel h-16 flex items-center justify-around z-50">
-<button class="flex flex-col items-center text-primary">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
-<span class="text-[10px] font-label font-bold uppercase tracking-tight">Home</span>
+
+<!-- CONTEÚDO -->
+<div class="p-6">
+
+<h1 class="text-3xl font-bold mb-2">Meu Centro de Aprendizado</h1>
+<p class="mb-6 text-gray-400">
+Bem-vindo de volta. Suas habilidades em monitoramento estão evoluindo.
+</p>
+
+<!-- CARD PRINCIPAL -->
+<div class="bg-gray-800 p-6 rounded-lg mb-6">
+<h2 class="text-xl font-bold mb-2">Módulo Atual</h2>
+<p class="mb-4">Linux, Zabbix e Grafana - Domínio Completo</p>
+
+<p>Progresso do Curso: 65%</p>
+
+<button class="mt-4 bg-blue-500 px-4 py-2 rounded hover:bg-blue-600">
+Continuar Curso
 </button>
-<button class="flex flex-col items-center text-on-surface-variant">
-<span class="material-symbols-outlined">school</span>
-<span class="text-[10px] font-label font-bold uppercase tracking-tight">Learn</span>
-</button>
-<button class="flex flex-col items-center text-on-surface-variant">
-<span class="material-symbols-outlined">search</span>
-<span class="text-[10px] font-label font-bold uppercase tracking-tight">Search</span>
-</button>
-<button class="flex flex-col items-center text-on-surface-variant">
-<span class="material-symbols-outlined">person</span>
-<span class="text-[10px] font-label font-bold uppercase tracking-tight">Me</span>
-</button>
-</nav>
-</body></html>
+</div>
+
+<!-- ATIVIDADE -->
+<div class="bg-gray-800 p-6 rounded-lg mb-6">
+<h2 class="text-xl font-bold mb-4">Atividade Recente</h2>
+
+<ul class="space-y-2">
+<li>✔ Finalizou: Zabbix Agent 2</li>
+<li>❌ Falhou: Quiz Prometheus</li>
+<li>▶ Iniciou: Grafana Dashboards</li>
+</ul>
+</div>
+
+<!-- RECOMENDAÇÕES -->
+<div class="bg-gray-800 p-6 rounded-lg">
+<h2 class="text-xl font-bold mb-4">Trilhas Recomendadas</h2>
+
+<ul class="space-y-2">
+<li>📊 Dashboards Avançados</li>
+<li>🧠 Psicologia de Monitoramento</li>
+<li>🖥️ Laboratório Zabbix Avançado</li>
+</ul>
+</div>
+
+</div>
+
+</body>
+</html>
